@@ -106,8 +106,10 @@ export default defineConfig({
 │    │    │    ...
 │    │─── /js
 │    │    │    about.js
+│    │    │    main.js
 │    │─── /scss
 │    │    │    about.scss
+│    │    │    style.scss
 │    ...
 ```
 
