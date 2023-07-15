@@ -55,7 +55,22 @@ npm run preview
 
 Допустим вы хотите создать новую страницу "О компании" и подключить стили.
 
-1. В директории `/pages/` создайте новый HTML файл `about.html`
+1. В директории `/pages/` создайте новый HTML файл `about.html` со стандартным html шаблоном и добавьте div с id='app':
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
+```
+
 2. В директории `/src/scss/` cоздайте новый SCSS файл `about.scss` и добавте в него сразу импорт `normalize.css`:
 
 ```css
