@@ -70,22 +70,22 @@ npm run preview
 </html>
 ```
 
-2. В директории `/src/scss/` cоздайте новый SCSS файл `about.scss` и добавте в него импорт `normalize.css`:
+2. В директории `/src/assets/styles/` cоздайте новый SCSS файл `about.scss` и добавте в него импорт `normalize.css`:
 
 ```css
 @import 'normalize.css';
 ```
 
-3. В директории `/src/js/` создайте новый JS файл `about.js` и импортируйте необходимые стили из директории `/src/scss/`:
+3. В директории `/src/assets/js/` создайте новый JS файл `about.js` и импортируйте необходимые стили из директории `/src/assets/styles/`:
 
 ```javascript
-import '../scss/about.scss';
+import '../styles/about.scss';
 ```
 
 5. Теперь подключите ваш JS файл к вашей HTML странице следующим образом:
 
 ```html
-<script type="module" src="src/js/about.js"></script>
+<script type="module" src="src/assets/js/about.js"></script>
 ```
 
 6. Итоговая структура вашего проекта должна выглядеть следующим образом:
@@ -98,14 +98,15 @@ import '../scss/about.scss';
 │─── /public
 │    │    ...
 │─── /src
+│    │─── /assets
+│    │    │─── /styles
+│    │    │    │    about.scss
+│    │    │    │    style.scss
+│    │    │─── /js
+│    │    │    │    about.js
+│    │    │    │    main.js
 │    │─── /components
 │    │    │    ...
-│    │─── /js
-│    │    │    about.js
-│    │    │    main.js
-│    │─── /scss
-│    │    │    about.scss
-│    │    │    style.scss
 │    ...
 ```
 

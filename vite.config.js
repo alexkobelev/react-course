@@ -8,7 +8,6 @@ const pageFiles = fs.readdirSync(pagesDir);
 
 // Создаем объект, где ключи - это названия страниц, а значения - это пути к файлам страниц
 const pages = pageFiles.reduce((acc, file) => {
-  // Удаляем расширение .html
   const pageName = file.replace('.html', '');
   acc[pageName] = resolve(pagesDir, file);
   return acc;
