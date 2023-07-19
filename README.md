@@ -5,13 +5,12 @@
 - [Базовый JavaScript](https://developer.mozilla.org/ru/docs/Web/JavaScript)
 - [Vite (сборщик проектов)](https://vitejs.dev/)
 - [SCSS](https://sass-lang.com/)
-- [Normalize.css](https://necolas.github.io/normalize.css/)
 
 ## Разработка
 
-### Требования
+### Примечание о совместимости из документации Vite
 
-Для установки и запуска проекта, необходим [NodeJS](https://nodejs.org/) v14+.
+Для Vite требуется [Node.js](https://nodejs.org/) версии 14.18+, 16+. Однако для работы некоторых шаблонов требуется более поздняя версия Node.js, обновите ее, если ваш менеджер пакетов предупредит об этом.
 
 ### Установка зависимостей
 
@@ -71,7 +70,7 @@ npm run preview
 </html>
 ```
 
-2. В директории `/src/scss/` cоздайте новый SCSS файл `about.scss` и добавте в него сразу импорт `normalize.css`:
+2. В директории `/src/scss/` cоздайте новый SCSS файл `about.scss` и добавте в него импорт `normalize.css`:
 
 ```css
 @import 'normalize.css';
@@ -89,25 +88,7 @@ import '../scss/about.scss';
 <script type="module" src="src/js/about.js"></script>
 ```
 
-6.  Обновите файл конфигурации `vite.config.js` в корневом каталоге проекта, добавив информацию о вашей новой странице:
-
-```javascript
-import { resolve } from 'path';
-import { defineConfig } from 'vite';
-
-export default defineConfig({
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'pages/about.html'),
-      },
-    },
-  },
-});
-```
-
-7. Итоговая структура вашего проекта должна выглядеть следующим образом:
+6. Итоговая структура вашего проекта должна выглядеть следующим образом:
 
 ```bash
 /project
@@ -128,8 +109,8 @@ export default defineConfig({
 │    ...
 ```
 
-8. Запустите проект локально с помощью команды `npm run dev`
-9. Проверьте отображение вашей новой страницы по адресу [http://localhost:5173/pages/about.html](http://localhost:5173/pages/about.html) (или другой порт, если вы изменили настройки сервера).
+7. Запустите проект локально с помощью команды `npm run dev`
+8. Проверьте отображение вашей новой страницы по адресу [http://localhost:5173/pages/about.html](http://localhost:5173/pages/about.html) (или другой порт, если вы изменили настройки сервера).
 
 ## Директория public и директория src/assets
 
