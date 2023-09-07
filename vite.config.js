@@ -13,6 +13,7 @@ const pages = pageFiles.reduce((acc, file) => {
   return acc;
 }, {});
 
+// https://vitejs.dev/config/
 export default defineConfig({
   build: {
     rollupOptions: {
@@ -21,5 +22,8 @@ export default defineConfig({
         ...pages,
       },
     },
+  },
+  esbuild: {
+    jsxInject: `import React from 'react'`,
   },
 });
