@@ -16,10 +16,10 @@ const UserListApp = () => {
   };
 
   return (
-    <div className={styles['users-list']}>
+    <React.Fragment className={styles['users-list']}>
       <CreateUser onCreateUser={createUserHandler} />
       <UserList users={userList} />
-    </div>
+    </React.Fragment>
   );
 };
 

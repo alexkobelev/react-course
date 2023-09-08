@@ -1,5 +1,5 @@
 import styles from '../../assets/styles/CreateUser.module.scss';
-import React, { useState, Fragment } from 'react';
+import { useState, Fragment } from 'react';
 import Card from '../UI/Card';
 import Button from '../UI/Button';
 import ErrorModal from '../UI/ErrorModal';
