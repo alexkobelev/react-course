@@ -1,12 +1,9 @@
 import './assets/styles/style.scss';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import App from './assets/jsx/App';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 
-root.render(
-  <AuthContextProvider>
-    <App />
-  </AuthContextProvider>
-);
+root.render(<App />);
