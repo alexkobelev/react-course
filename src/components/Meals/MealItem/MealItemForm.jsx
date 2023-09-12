@@ -2,13 +2,13 @@ import React from 'react';
 import styles from '../../../assets/styles/MealItemForm.module.scss';
 import Input from '../../UI/Input';
 
-const MealItemForm = () => {
+const MealItemForm = (props) => {
   return (
     <form className={styles.form}>
       <Input
         label="Количество"
         input={{
-          id: 'amount',
+          id: props.id,
           type: 'number',
           min: '1',
           step: '1',
