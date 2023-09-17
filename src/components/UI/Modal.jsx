@@ -9,7 +9,7 @@ const Backdrop = (props) => {
 const ModalWindow = (props) => {
   return (
     <div className={styles.modal}>
-      <div className={styles.content}>{props.children}</div>;
+      <div className={styles.content}>{props.children}</div>
     </div>
   );
 };
